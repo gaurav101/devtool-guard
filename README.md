@@ -82,3 +82,16 @@ npm run test:coverage
 The coverage command enforces at least 95% line, branch, and function coverage
 for the compiled library code. It uses the Node.js test runner and coverage
 support available in Node.js 24.
+
+## Publishing
+
+The GitHub Actions workflow publishes to npm when a `v<package-version>` tag is
+pushed (for example, `v1.2.3`). It reruns the test and coverage gate and checks
+that the tag matches `package.json`.
+
+Before using the workflow, configure npm trusted publishing for this GitHub
+repository and the `Publish to npm` workflow, using the `npm` GitHub environment.
+The npm package must be configured with that trusted publisher. No long-lived
+npm token is stored in GitHub Actions. See
+[ARCHITECTURE.md](./ARCHITECTURE.md) for the project structure; publishing
+workflow files are in `.github/workflows/`.

@@ -4,6 +4,9 @@ A zero-dependency browser utility that offers best-effort DevTools detection and
 optional deterrence. It is not a security boundary: users can bypass client-side
 checks, and browser behavior varies.
 
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for module responsibilities and
+guidance on extending the library.
+
 ## Install
 
 ```sh
